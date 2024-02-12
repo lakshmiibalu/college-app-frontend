@@ -30,6 +30,9 @@ const AddStudent = () => {
                 console.log(response.data)
                 if (response.data.status == "success") {
 
+                    console.log(response.data.userData._id)
+                    sessionStorage.setItem("userId",response.data.userData._id)
+
                     alert("Successfully Added")
 
                 } else {
