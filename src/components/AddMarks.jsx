@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import NewNav from './NewNav'
 
 const AddMarks = () => {
 
@@ -26,16 +27,43 @@ const AddMarks = () => {
                 if (response.data.status == "success") {
 
                     alert("Marks Added")
+                    setInput(
+                        {
+                            "userId":sessionStorage.getItem("userId"),
+                            "english":"",
+                            "maths":"",
+                            "physics":"",
+                            "biology":"",
+                            "chemistry":""
+                        }
+                    )
                     
                 } else {
                     
                     alert("Error")
+                    setInput(
+                        {
+                            "userId":sessionStorage.getItem("userId"),
+                            "english":"",
+                            "maths":"",
+                            "physics":"",
+                            "biology":"",
+                            "chemistry":""
+                        }
+                    )
                 }
             }
         )
     }
   return (
     <div>
+
+        <NewNav/>
+
+        <br />
+        <br />
+
+        
 
         <div className="container">
             <div className="row">
