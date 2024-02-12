@@ -30,6 +30,8 @@ const AddStudent = () => {
                 console.log(response.data)
                 if (response.data.status == "success") {
 
+                    
+
                     alert("Successfully Added")
 
                 } else {
@@ -120,7 +122,7 @@ const AddStudent = () => {
                         </div>
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-12 col-xl-12 col-xxl-12">
 
-                            <button className="btn btn-info">Submit</button>
+                            <button className="btn btn-info" onClick={readValues}>Submit</button>
 
                         </div>
                     </div>

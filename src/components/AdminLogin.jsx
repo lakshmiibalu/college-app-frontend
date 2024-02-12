@@ -18,8 +18,8 @@ const AdminLogin = () => {
     const readValues = ()=>{
         console.log(input)
         if (input.userName == "admin" && input.password == "admin") {
-
-           navigate("/add")
+            
+            navigate("/add")
             
         } else {
 
