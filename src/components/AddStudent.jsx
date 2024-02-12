@@ -30,13 +30,36 @@ const AddStudent = () => {
                 console.log(response.data)
                 if (response.data.status == "success") {
 
-                    
-
                     alert("Successfully Added")
+                    setInput(
+                        {
+                            "name":"",
+                             "rollno":"",
+                             "admno":"",
+                             "clgname":"",
+                             "parent":"",
+                             "mobno":"",
+                             "email":"l",
+                             "password":""
+                        }
+
+                    )
 
                 } else {
 
                     alert("Something went wrong")
+                    setInput(
+                        {
+                            "name":"",
+                             "rollno":"",
+                             "admno":"",
+                             "clgname":"",
+                             "parent":"",
+                             "mobno":"",
+                             "email":"l",
+                             "password":""
+                        }
+                    )
                 }
             }
         )
