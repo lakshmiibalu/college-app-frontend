@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const AdminLogin = () => {
+    const navigate = useNavigate()
 
     const [input,setInput] = new useState(
         {
@@ -16,19 +17,29 @@ const AdminLogin = () => {
     }
     const readValues = ()=>{
         console.log(input)
-        if (input.userName == "admin") {
+        if (input.userName == "admin" && input.password == "admin") {
 
             alert("succesful")
             
         } else {
 
             alert("invalid login")
+            setInput(
+                {
+                    "userName":"",
+                    "password":""
+                }
+            )
             
         }
     }
     
   return (
     <div>
+
+        <br />
+        <br />
+
 
         <div className="container">
             <div className="row">
@@ -52,8 +63,15 @@ const AdminLogin = () => {
                         <button className="btn btn-info" onClick={readValues}>Login</button>
                         
                         </div>
+
+                        <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+
+                            <Link class="nav-link" to="/studentlogin"> Student Login</Link>
+                        
+                        </div>
+
                     </div>
-                    <Link to="/studentlogin">Student Login</Link>
+                    
                 </div>
             </div>
         </div>
