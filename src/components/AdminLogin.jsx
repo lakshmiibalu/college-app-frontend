@@ -19,7 +19,7 @@ const AdminLogin = () => {
         console.log(input)
         if (input.userName == "admin" && input.password == "admin") {
 
-            alert("succesful")
+           navigate("/add")
             
         } else {
 
